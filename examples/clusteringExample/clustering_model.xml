@@ -1,0 +1,38 @@
+<owNeuralNetwork>
+  <Optimizer type="ADAM" LR="0.01" />
+  <Loss type="Mean Squared Error Loss" />
+  <Hyperparameters>
+    <ProjectType>4</ProjectType>
+    <MaxEpochs>200</MaxEpochs>
+    <MaxTime>0</MaxTime>
+    <MinError>0.001</MinError>
+    <LossStagnationTolerance>0.0005</LossStagnationTolerance>
+    <LossStagnationPatience>50</LossStagnationPatience>
+    <RegType>2</RegType>
+    <PrintInterval>50</PrintInterval>
+  </Hyperparameters>
+  <Layers count="4">
+    <Layer type="Normalization Layer">
+<Size>4</Size>
+<Min>-1.00000000 -0.99800003 -1.00000000 -1.00000000</Min>
+<Max>5.19199991 5.19799995 1.19599998 1.19799995</Max>
+    </Layer>
+    <Layer type="Projection Layer">
+<InputSize>4</InputSize>
+<OutputSize>2</OutputSize>
+<Weights>-0.01148820 -0.15364547 0.30750880 -0.37736097 -0.21853265 -0.65085107 0.48664525 1.02918541</Weights>
+    </Layer>
+    <Layer type="Cluster Layer">
+<InputSize>2</InputSize>
+<NumClusters>3</NumClusters>
+<Centroids>-0.51187623 0.17216620 0.46842745 0.01962868 0.23419484 0.16588861</Centroids>
+<RegType>2</RegType>
+<RegLambda>0.01</RegLambda>
+    </Layer>
+    <Layer type="Distance Layer">
+<InputSize>3</InputSize>
+<NumAnchors>3</NumAnchors>
+<Anchors>0.77357072 0.25522041 0.09148084 0.77262694 0.25521940 0.09105450 0.77135664 0.25652337 0.09428316</Anchors>
+    </Layer>
+  </Layers>
+</owNeuralNetwork>
