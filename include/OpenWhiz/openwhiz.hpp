@@ -60,6 +60,7 @@
 // Optimizers (Full implementations)
 #include "optimizers/owADAMOptimizer.hpp"
 #include "optimizers/owConjugateGradientOptimizer.hpp"
+#include "optimizers/owGradientDescentOptimizer.hpp"
 #include "optimizers/owLBFGSOptimizer.hpp"
 #include "optimizers/owMomentumOptimizer.hpp"
 #include "optimizers/owRMSPropOptimizer.hpp"
