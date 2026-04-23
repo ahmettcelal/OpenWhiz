@@ -485,6 +485,12 @@ inline void owNeuralNetwork::createNeuralNetwork(owProjectType type, const std::
     addLayer(outLayer);
 }
 
+/**
+ * @brief Orchestrates the training process based on the optimizer's capabilities.
+ * 
+ * IMPORTANT: When operating in GPU mode (OW_USE_GPU), it is mandatory to use owADAMOptimizer.
+ * Global optimizers like L-BFGS are currently optimized for high-precision CPU execution.
+ */
 inline void owNeuralNetwork::train() {
     if (!m_dataset || !m_optimizer || !m_loss) return;
 
